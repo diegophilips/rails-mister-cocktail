@@ -10,7 +10,7 @@ before_action :find_cocktail, only: [:show]
   end
 
   def new
-    @cocktail = Cocktail.ne
+    @cocktail = Cocktail.new
   end
 
    def create
@@ -29,6 +29,6 @@ before_action :find_cocktail, only: [:show]
     end
 
     def cocktail_params
-      params.require(:cocktail).permit(:name)
+      params.require(:cocktail).permit(:name, :photo)
     end
 end
