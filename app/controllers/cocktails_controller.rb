@@ -10,7 +10,7 @@ before_action :find_cocktail, only: [:show]
   end
 
   def new
-    @cocktail = Cocktail.new
+    @cocktail = Cocktail.ne
   end
 
    def create
